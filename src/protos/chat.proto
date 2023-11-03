@@ -1,0 +1,16 @@
+// chat.proto
+
+syntax = "proto3";
+
+package chat;
+
+// The chat message contains a sender and content.
+message ChatMessage {
+  string sender = 1;
+  string content = 2;
+}
+
+// The ChatService provides a bidirectional stream for sending and receiving messages.
+service Chat {
+  rpc ChatStream(stream ChatMessage) returns (stream ChatMessage);
+}
