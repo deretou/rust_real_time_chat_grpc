@@ -3,7 +3,7 @@
 use chat::chat_client::ChatClient;
 use chat::ChatMessage;
 use tokio::sync::mpsc;
-use tokio_stream::StreamExt;
+
 use tokio::io::{self, AsyncBufReadExt, BufReader};
 use tonic::Request;
 
